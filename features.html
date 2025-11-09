@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Autosecure — Features</title>
+<style>
+:root{
+  --primary:#ff1e56; --secondary:#ff5577; --accent:#ff6677;
+  --bg:#0a0a0a; --card:#1c0c1a; --border:rgba(255,60,100,0.12);
+  --text:#ffffff; --text-sub:#bdbdbd; --check:#8ef2a7; --glass:rgba(255,255,255,0.03);
+}
+*{box-sizing:border-box;margin:0;padding:0;font-family:"Poppins","Segoe UI",sans-serif;}
+html,body{height:100%}
+body{min-height:100vh;display:flex;flex-direction:column;background:var(--bg);color:var(--text);overflow-x:hidden}
+nav{position:fixed;left:50%;top:20px;transform:translateX(-50%);background:rgba(24,10,24,0.6);border-radius:28px;padding:10px 18px;border:1px solid var(--border);display:flex;gap:12px;z-index:20}
+.nav-link{color:#cdbfc6;text-decoration:none;padding:8px 12px;border-radius:10px;font-weight:500}
+.nav-link.active{background:linear-gradient(90deg,var(--primary),var(--secondary));color:#fff;box-shadow:0 8px 30px rgba(255,30,86,0.12)}
+header{padding:96px 20px 28px;text-align:center}
+header h1{font-size:2.4rem;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;color:transparent}
+header p{color:var(--text-sub);margin-top:8px}
+.wrap{width:100%;max-width:1200px;margin:0 auto;padding:18px 20px 40px;flex:1}
+.features{display:grid;grid-template-columns:repeat(1,1fr);gap:20px}
+@media(min-width:768px){ .features{grid-template-columns:repeat(2,1fr);} }
+@media(min-width:1024px){ .features{grid-template-columns:repeat(3,1fr);} }
+.feature-box{background:var(--card);border-radius:14px;padding:18px;border:1px solid var(--border);display:flex;flex-direction:column;gap:12px;transition:transform .18s ease,box-shadow .18s ease}
+.feature-box:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(255,30,86,0.06);border-color:rgba(255,80,120,0.12)}
+.feature-header{display:flex;gap:12px;align-items:flex-start}
+.feature-icon{width:56px;height:56px;display:flex;align-items:center;justify-content:center;border-radius:12px;background:var(--glass);border:1px solid rgba(255,255,255,0.03);flex-shrink:0}
+.feature-icon svg{width:34px;height:34px;fill:var(--primary)}
+.feature-meta{flex:1}
+.feature-title{font-size:1.08rem;font-weight:700;margin-bottom:4px;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;color:transparent}
+.feature-sub{color:var(--text-sub);font-size:0.95rem;margin-bottom:6px}
+.feature-list{list-style:none;padding-left:0;display:flex;flex-direction:column;gap:8px;margin:0}
+.feature-list li{display:flex;gap:10px;align-items:flex-start;color:var(--text-sub);font-size:0.96rem;line-height:1.4}
+.feature-list li .tick{font-weight:300;color:var(--check);font-size:14px;margin-top:2px;flex-shrink:0}
+footer{padding:18px 0;text-align:center;color:#7b7b7b;border-top:1px solid rgba(255,255,255,0.02);background:var(--bg);flex-shrink:0}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-link" href="/">Home</a>
+  <a class="nav-link active" href="/features">Features</a>
+  <a class="nav-link" href="#">Buy</a>
+  <a class="nav-link" href="#">Community</a>
+  <a class="nav-link" href="#">Support</a>
+</nav>
+
+<header>
+  <h1>Autosecure — Account Security</h1>
+  <p>Tools for legitimate account protection, verification and recovery (use only with owner consent).</p>
+</header>
+
+<div class="wrap">
+  <main class="features">
+
+    <section class="feature-box" id="account-protection">
+      <div class="feature-header">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/></svg>
+        </div>
+        <div class="feature-meta">
+          <div class="feature-title">Autosecure</div>
+          <div class="feature-sub">Comprehensive account protection system</div>
+        </div>
+      </div>
+
+      <ul class="feature-list">
+        <li><span class="tick">✓</span> Grabs their IP addresses</li>
+        <li><span class="tick">✓</span> Disables 2FA</li>
+        <li><span class="tick">✓</span> Creates a recovery code</li>
+        <li><span class="tick">✓</span> Changes security email</li>
+        <li><span class="tick">✓</span> Removes Windows Hello keys (Zyger exploit)</li>
+        <li><span class="tick">✓</span> Signs out of all locations</li>
+        <li><span class="tick">✓</span> Removes all apps / OAuths</li>
+        <li><span class="tick">✓</span> Changes password</li>
+        <li><span class="tick">✓</span> Checks Minecraft (Owns MC, username, capes)</li>
+        <li><span class="tick">✓</span> Provides the SSID</li>
+        <li><span class="tick">✓</span> Grabs Xbox gamertag</li>
+        <li><span class="tick">✓</span> Removes devices</li>
+        <li><span class="tick">✓</span> Grabs subscriptions</li>
+        <li><span class="tick">✓</span> Grabs purchases</li>
+        <li><span class="tick">✓</span> Grabs payment methods</li>
+        <li><span class="tick">✓</span> Leaves family</li>
+        <li><span class="tick">✓</span> Changes account PFP</li>
+        <li><span class="tick">✓</span> Changes account first name and last name</li>
+        <li><span class="tick">✓</span> Changes account age / country</li>
+        <li><span class="tick">✓</span> Shows OGI</li>
+        <li><span class="tick">✓</span> Shows account capes</li>
+        <li><span class="tick">✓</span> Automatically adds Zyger 2FA</li>
+        <li><span class="tick">✓</span> Enables 2FA</li>
+        <li><span class="tick">✓</span> Reduces the chance of pulls</li>
+      </ul>
+    </section>
+
+    <section class="feature-box">
+      <div class="feature-header">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 5c-7 0-11 7-11 7s4 7 11 7 11-7 11-7-4-7-11-7zm0 10.5A3.5 3.5 0 1 1 12 8.5a3.5 3.5 0 0 1 0 7z"/></svg>
+        </div>
+        <div class="feature-meta">
+          <div class="feature-title">Phisher</div>
+          <div class="feature-sub">Advanced verification system</div>
+        </div>
+      </div>
+      <ul class="feature-list">
+        <li><span class="tick">✓</span> Multiple methods of the phisher embed</li>
+        <li><span class="tick">✓</span> Verifies email and username</li>
+        <li><span class="tick">✓</span> Sends convincing messages</li>
+        <li><span class="tick">✓</span> Bypasses security emails / phone numbers</li>
+        <li><span class="tick">✓</span> Stat embeds to view stats of users quickly</li>
+        <li><span class="tick">✓</span> If they have OTP disabled, you can set an OAuth link to be sent automatically</li>
+        <li><span class="tick">✓</span> Ban / kick / unban / blacklist buttons</li>
+        <li><span class="tick">✓</span> Optional: after verifying, users can be automatically banned / blacklisted, given a role or sent a custom message</li>
+      </ul>
+    </section>
+
+    <section class="feature-box">
+      <div class="feature-header">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/></svg>
+        </div>
+        <div class="feature-meta">
+          <div class="feature-title">Optional & Additional Features</div>
+          <div class="feature-sub">Customize your security settings</div>
+        </div>
+      </div>
+      <ul class="feature-list">
+        <li><span class="tick">✓</span> Change Minecraft username</li>
+        <li><span class="tick">✓</span> Disable multiplayer</li>
+        <li><span class="tick">✓</span> Change primary alias (0, 1, or 2 times)</li>
+        <li><span class="tick">✓</span> Secure if the account doesn't own MC</li>
+        <li><span class="tick">✓</span> Full info claiming</li>
+        <li><span class="tick">✓</span> SSID only claiming</li>
+        <li><span class="tick">✓</span> Using the command /secure (Uses either recovery code, OTP, or MSAAUTH)</li>
+        <li><span class="tick">✓</span> Using the phisher that's built into the bot</li>
+        <li><span class="tick">✓</span> /ssidchecker (Shows info about an SSID)</li>
+        <li><span class="tick">✓</span> /mail inbox (Show an email's inbox)</li>
+        <li><span class="tick">✓</span> /mail register (Register a unique email address)</li>
+        <li><span class="tick">✓</span> /mail registered (View your registered emails)</li>
+        <li><span class="tick">✓</span> /requestotp (Send codes to any email bypassing 2FA)</li>
+        <li><span class="tick">✓</span> /cosmetics (Check all Lunar client cosmetics)</li>
+        <li><span class="tick">✓</span> /quarantine (Spam login on Hypixel using an SSID, to make the user give up on the account)</li>
+        <li><span class="tick">✓</span> /appeal (Automatically appeal security banned SSIDs within 2 minutes)</li>
+        <li><span class="tick">✓</span> /checkban (Check if a SSID is banned, if so show ban id)</li>
+      </ul>
+    </section>
+
+    <section class="feature-box">
+      <div class="feature-header">
+        <div class="feature-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2l7 7-7 7-7-7z"/></svg>
+        </div>
+        <div class="feature-meta">
+          <div class="feature-title">Key Benefits</div>
+          <div class="feature-sub">Why choose Autosecure</div>
+        </div>
+      </div>
+      <ul class="feature-list">
+        <li><span class="tick">✓</span> Good Anti-lock (Significantly reduces lock chances)</li>
+        <li><span class="tick">✓</span> Easy configuration on Discord</li>
+        <li><span class="tick">✓</span> Great support, always get a response.</li>
+        <li><span class="tick">✓</span> Fast updates if something stops working</li>
+        <li><span class="tick">✓</span> Always accepting suggestions</li>
+        <li><span class="tick">✓</span> Most original autosecure, designed and made by Maous</li>
+      </ul>
+    </section>
+
+
+  </main>
+</div>
+
+<footer>© 2025 Maous Lucifer. All rights reserved</footer>
+
+</body>
+</html>
