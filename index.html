@@ -52,8 +52,25 @@ a{text-decoration:none;}
 .feature-icon svg{width:34px;height:34px;fill:var(--primary);}
 .feature-title{font-size:1.1rem;font-weight:700;background:linear-gradient(90deg,var(--primary),var(--accent));-webkit-background-clip:text;color:transparent;}
 .feature-sub{color:var(--text-sub);font-size:0.95rem;}
-.feature-list{list-style:none;display:flex;flex-direction:column;gap:8px;padding-left:0;margin:0;}
-.feature-list li{display:flex;gap:10px;align-items:flex-start;color:var(--text-sub);font-size:0.95rem;}
+.feature-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 0;
+  margin: 0;
+  text-align: left; 
+  align-items: flex-start; 
+}
+
+.feature-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: var(--text-sub);
+  font-size: 0.95rem;
+  justify-content: flex-start;
+}
 .feature-list .tick{color:var(--check);}
 #purchase{padding:80px 20px; text-align:center; background:#111;}
 .pricing-container {
@@ -79,7 +96,7 @@ footer{padding:18px 0;text-align:center;color:#777;border-top:1px solid rgba(255
 .discord-intro-box .discord-button{display:inline-block;margin-top:15px;padding:12px 28px;font-size:1rem;font-weight:600;color:#fff;border:2px solid rgba(255,127,127,0.7);border-radius:50px;background:rgba(255,127,127,0.1);transition:all 0.3s ease;box-shadow:0 0 10px rgba(255,85,119,0.2);}
 .discord-intro-box .discord-button:hover{background:rgba(255,127,127,0.2);box-shadow:0 0 20px rgba(255,85,119,0.4);}
 .communities-grid{display:flex;justify-content:center;flex-wrap:wrap;gap:30px;}
-.community-card{width:400px;max-width:90%;background:var(--card-bg);border:2px solid var(--card-border);border-radius:20px;padding:12px;display:flex;flex-direction:column;gap:10px;text-align:left;color:#fff;box-shadow:0 0 15px rgba(255,85,119,0.2),0 0 30px rgba(255,85,119,0.15);transition:all 0.3s ease;}
+.community-card{width:400px;max-width:90%;background:var(--card-bg);border:2px solid var(--card-border);border-radius:20px;padding:20px;min-height:250px;display:flex;flex-direction:column;gap:10px;text-align:left;color:#fff;box-shadow:0 0 15px rgba(255,85,119,0.2),0 0 30px rgba(255,85,119,0.15);transition:all 0.3s ease;}
 .community-card:hover{box-shadow:0 0 25px rgba(255,85,119,0.4),0 0 50px rgba(255,85,119,0.3);transform:translateY(-3px);}
 .community-header{display:flex;gap:15px;align-items:center;}
 .guild-icon{width:60px;height:60px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:rgba(255,127,127,0.2);}
@@ -94,8 +111,7 @@ footer{padding:18px 0;text-align:center;color:#777;border-top:1px solid rgba(255
 .copy-btn{padding:6px 14px;border-radius:12px;border:2px solid var(--card-border);background:var(--copy-btn-normal);color:#fff;font-weight:600;cursor:pointer;transition:all 0.3s ease;}
 .copy-btn.copied{background:var(--copy-btn-active);border-color:var(--copy-btn-active);}
 .copy-btn:hover{box-shadow:0 0 15px rgba(255,85,119,0.4);}
-.invite-description{font-size:0.85rem;color:#ccc;margin-top:8px;border:1px solid rgba(255,255,255,0.2);border-radius:8px;padding:6px 10px;background:rgba(255,255,255,0.05);}
-</style>
+.invite-description {font-size: 0.85rem;color: #ccc;margin: 12px auto 0;border: 1px solid rgba(255,255,255,0.2);border-radius: 8px;padding: 6px 10px;background: rgba(255,255,255,0.05);text-align: center;width: fit-content;}</style>
 </head>
 <body>
 
@@ -216,82 +232,83 @@ footer{padding:18px 0;text-align:center;color:#777;border-top:1px solid rgba(255
   </div>
 </section>
 
-<!-- PURCHASE -->
 <section id="purchase">
-  <div class="aura"></div><div class="particles" id="particles-features"></div>
+  <div class="aura"></div>
+  <div class="particles" id="particles-features"></div>
+
   <div class="welcome-card">
     <div class="discord-intro-box">
-      <h1>Purhcase Option</h1>
+      <h1>Purchase Options</h1>
       <div class="discord-button">Choose the perfect plan to secure your digital life</div>
     </div>
   </div>
-  <div class="pricing-container">
-    <div class="pricing-card" style="width:420px; padding:36px 30px;">
-        <h2 style="margin-bottom:20px; color:#fff;">Autosecure</h2>
-        <div class="price" style="font-size:1.8rem; font-weight:700; margin-bottom:20px; color:#fff;">
-            <span class="price-amount">$3,5</span><span class="price-period" style="font-size:1rem; color:#bbb;"> / month</span>
-        </div>
-        <ul class="features-list" style="color:#fff;"><li style="display:flex;align-items:center;gap:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Secure all your accounts</li></ul>
-        <ul class="features-list" style="color:#fff;"><li style="display:flex;align-items:center;gap:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Full access to Autosecure Features</li></ul>
-        <ul class="features-list" style="color:#fff;"><li style="display:flex;align-items:center;gap:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Fast updates if something stops working</li></ul>
-        <ul class="features-list" style="color:#fff;"><li style="display:flex;align-items:center;gap:10px;"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>Great support, always get a response</li></ul>
-        <div class="card-actions" style="flex-direction:column; gap:12px;">
-            <a href="#features" style="color:#ff5577; text-decoration:underline; font-weight:600;">View All Features</a>
-            <a href="https://secures.mysellauth.com/product/autosecure-key" target="_blank" class="purchase-button"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>Purchase Now</a>
-        </div>
-    </div>
+
+  <!-- Container cho 2 card -->
+  <div class="pricing-container" style="display:flex; flex-wrap:wrap; gap:20px; justify-content:center;">
     
+    <!-- Autosecure Card -->
+    <div class="pricing-card" style="width:420px; padding:36px 30px;">
+      <h2 style="margin-bottom:20px; color:#fff;">Autosecure</h2>
+      <div class="price" style="font-size:1.8rem; font-weight:700; margin-bottom:20px; color:#fff;">
+        <span class="price-amount">$3,5</span>
+        <span class="price-period" style="font-size:1rem; color:#bbb;"> / month</span>
+      </div>
+      <ul class="features-list" style="color:#fff; margin:0; padding:0; list-style:none;">
+        <li style="display:flex;align-items:center;gap:10px; margin:4px 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Secure all your accounts
+        </li>
+        <li style="display:flex;align-items:center;gap:10px; margin:4px 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Full access to Autosecure Features
+        </li>
+        <li style="display:flex;align-items:center;gap:10px; margin:4px 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Fast updates if something stops working
+        </li>
+        <li style="display:flex;align-items:center;gap:10px; margin:4px 0;">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Great support, always get a response
+        </li>
+      </ul>
+      <div class="card-actions" style="flex-direction:column; gap:12px;">
+        <a href="#features" style="color:#ff5577; text-decoration:underline; font-weight:600;">View All Features</a>
+        <a href="https://secures.mysellauth.com/product/autosecure-key" target="_blank" class="purchase-button">
+          Purchase Now
+        </a>
+      </div>
+    </div>
+
     <!-- Bot Slots Card -->
     <div class="pricing-card" style="width:420px; padding:36px 30px;">
-        <h2 style="margin-bottom:20px; color:#fff;">Bot Slot</h2>
-        
-        <div class="price" style="font-size:1.8rem; font-weight:700; margin-bottom:20px; color:#fff;">
-            <span class="price-amount">$8</span>
-            <span class="price-period" style="font-size:1rem; color:#bbb;"> / lifetime</span>
-        </div>
-        
-        <ul class="features-list" style="list-style:none; padding-left:0; margin-bottom:24px; color:#fff;">
-            <li style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                1 additional bot slot
-            </li>
-            <li style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                Lifetime access
-            </li>
-            <li style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                Customizable bot settings
-            </li>
-            <li style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-                    <polyline points="20 6 9 17 4 12"></polyline>
-                </svg>
-                Max 25 extra slots per user
-            </li>
-        </ul>
-        
-        <div class="card-actions" style="display:flex; flex-direction:column; gap:12px;">
-            <a href="https://secures.mysellauth.com/product/extra-bot-slots" target="_blank" class="purchase-button" style="display:flex; align-items:center; justify-content:center; gap:8px; padding:12px 24px; background:linear-gradient(90deg,#ff1e56,#ff5577); color:#fff; border-radius:8px; font-weight:600; text-decoration:none;">
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <circle cx="9" cy="21" r="1"></circle>
-                    <circle cx="20" cy="21" r="1"></circle>
-                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
-                </svg>
-                Purchase Now
-            </a>
-        </div>
+      <h2 style="margin-bottom:20px; color:#fff;">Bot Slot</h2>
+      <div class="price" style="font-size:1.8rem; font-weight:700; margin-bottom:20px; color:#fff;">
+        <span class="price-amount">$8</span>
+        <span class="price-period" style="font-size:1rem; color:#bbb;"> / lifetime</span>
+      </div>
+      <ul class="features-list" style="list-style:none; padding-left:0; margin-bottom:24px; color:#fff;">
+        <li style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">1 additional bot slot</li>
+        <li style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">Lifetime access</li>
+        <li style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">Customizable bot settings</li>
+        <li style="display:flex; align-items:center; gap:10px; margin-bottom:8px;">Max 25 extra slots per user</li>
+      </ul>
+      <div class="card-actions" style="display:flex; flex-direction:column; gap:12px;">
+        <a href="https://secures.mysellauth.com/product/extra-bot-slots" target="_blank" class="purchase-button">
+          Purchase Now
+        </a>
+      </div>
     </div>
 
   </div>
 </section>
-
 
 <!-- DISCORD COMMUNITIES -->
 <section id="discord" class="main-container">
@@ -311,15 +328,16 @@ footer{padding:18px 0;text-align:center;color:#777;border-top:1px solid rgba(255
           <div class="guild-stats"></div>
         </div>
       </div>
-      <div class="invite-section">
+      <div class="invite-description">
         <div class="invite-link">
           <div>
-            <svg class="discord-icon" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152..."></path></svg>
+            <svg class="discord-icon" viewBox="0 0 24 24">
+              <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3847-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
             <span>discord.gg/RTPyrgQA</span>
           </div>
           <button class="copy-btn" onclick="copyToClipboard('discord.gg/RTPyrgQA', this)">Copy Link</button>
         </div>
-        <p class="invite-description">Join our Autosecure Server for updates & support.</p>
+        <p class="invite-description">Join our Autosecure. community for the latest updates, support, and discussions.</p>
       </div>
     </div>
     <!-- Community Card 2 -->
@@ -333,15 +351,16 @@ footer{padding:18px 0;text-align:center;color:#777;border-top:1px solid rgba(255
           <div class="guild-stats"></div>
         </div>
       </div>
-      <div class="invite-section">
+      <div class="invite-description">
         <div class="invite-link">
           <div>
-            <svg class="discord-icon" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152..."></path></svg>
+            <svg class="discord-icon" viewBox="0 0 24 24">
+              <path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3847-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189Z"></path></svg>
             <span>discord.gg/RTPyrgQA</span>
           </div>
           <button class="copy-btn" onclick="copyToClipboard('discord.gg/RTPyrgQA', this)">Copy Link</button>
         </div>
-        <p class="invite-description">Backup Server for updates if main is down.</p>
+        <p class="invite-description">Backup server for updates and support when the main server is termed.</p>
       </div>
     </div>
   </div>
